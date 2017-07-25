@@ -27,7 +27,8 @@ module ReactOnRails
       if using_webpacker_lite? && WebpackerLite::Manifest.lookup(bundle_name)
         # If using webpacker_lite gem
         public_subdir_hashed_file_name = ActionController::Base.helpers.asset_pack_path(bundle_name)
-        return File.join("public", public_subdir_hashed_file_name)
+        # return File.join("public", public_subdir_hashed_file_name)
+        return public_subdir_hashed_file_name
       end
 
       File.join(ReactOnRails.configuration.generated_assets_dir, bundle_name)
