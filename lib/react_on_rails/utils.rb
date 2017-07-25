@@ -74,7 +74,8 @@ exitstatus: #{status.exitstatus}#{stdout_msg}#{stderr_msg}
         # If using webpacker_lite gem
         # Per https://github.com/rails/webpacker/issues/571, this path might
         public_subdir_hashed_file_name = ActionController::Base.helpers.pack_path(bundle_name)
-        return File.join("public", public_subdir_hashed_file_name)
+        # return File.join("public", public_subdir_hashed_file_name)
+        return public_subdir_hashed_file_name
       end
 
       File.join(ReactOnRails.configuration.generated_assets_dir, bundle_name)
